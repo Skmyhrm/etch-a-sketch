@@ -1,0 +1,24 @@
+:root {
+  --height: 100px;
+  --width: 100px;
+}
+
+.container {
+  height: var(--height);
+  width: var(--width);
+  border: solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container > * {
+  border: solid green;
+  flex: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
