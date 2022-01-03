@@ -1,24 +1,8 @@
-:root {
-  --height: 100px;
-  --width: 100px;
+#grid {
+  display: grid;
+  grid-template-columns: repeat(50, auto);
 }
 
-.container {
-  height: var(--height);
-  width: var(--width);
-  border: solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.container > * {
-  border: solid green;
-  flex: 1;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+#grid div {
+  aspect-ratio: 1;
 }
