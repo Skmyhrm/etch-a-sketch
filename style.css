@@ -1,8 +1,17 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
 #grid {
   display: grid;
-  grid-template-columns: repeat(50, auto);
+  grid-template-columns: repeat(16, auto);
 }
 
 #grid div {
   aspect-ratio: 1;
 }
+
+/* .hover{
+
+} */
