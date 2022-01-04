@@ -22,10 +22,7 @@ function ReAssignStuff() {
   cells.forEach((cell) => cell.addEventListener("mouseover", changeColor));
 }
 
-function Reset() {
-  console.log("hey");
-  cells.forEach((cell) => cell.remove());
-  newGridNum = prompt("How many squares per side would you like?");
+function handleReset(newGridNum) {
   newGridNumInt = parseInt(newGridNum);
   cells = [];
   for (i = 0; i <= newGridNumInt - 1; i++) {
@@ -38,6 +35,18 @@ function Reset() {
     }
   }
   ReAssignStuff();
+}
+
+function Reset() {
+  console.log("hey");
+  cells.forEach((cell) => cell.remove());
+  newGridNum = prompt("How many squares per side would you like?");
+  if (newGridNum > 100) {
+    alert("Try Again, number shouldn't be more than 100");
+    Reset();
+  } else {
+    handleReset(newGridNum);
+  }
 }
 
 var cells = Array.from(document.querySelectorAll(".cell"));
